@@ -1,9 +1,0 @@
-TypeError: r is not a function
-    at http://localhost/pizzapranks/wp-includes/js/dist/components.min.js?ver=fbd4a5bf5809c79c6eef4817c6cbe9ea:7:394527
-    at Vb (http://localhost/pizzapranks/wp-includes/js/dist/vendor/react-dom.min.js?ver=16.9.0:104:431)
-    at Xi (http://localhost/pizzapranks/wp-includes/js/dist/vendor/react-dom.min.js?ver=16.9.0:151:136)
-    at unstable_runWithPriority (http://localhost/pizzapranks/wp-includes/js/dist/vendor/react.min.js?ver=16.9.0:26:340)
-    at Ma (http://localhost/pizzapranks/wp-includes/js/dist/vendor/react-dom.min.js?ver=16.9.0:52:280)
-    at Yb (http://localhost/pizzapranks/wp-includes/js/dist/vendor/react-dom.min.js?ver=16.9.0:150:420)
-    at Ae (http://localhost/pizzapranks/wp-includes/js/dist/vendor/react-dom.min.js?ver=16.9.0:118:178)
-    at xi (http://localhost/pizzapranks/wp-includes/js/dist/vendor/react-dom.min.js?ver=16.9.0:39:146)

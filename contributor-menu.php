@@ -29,6 +29,11 @@ function contributors_menu_wcw_render_block($atts) {
 	$menu_items = wp_get_nav_menu_items($atts['selectedMenu']);
 
 	$menu_html = []; 
+
+	if( !is_array($menu_items) ) {
+		return '<div></div>';
+	}
+
 	foreach ($menu_items as $item) {
 		if( isset($item->url) && isset( $item->title))
 		array_push($menu_html, '<li><a href="'.$item->url.'">'.$item->title.'</a></li>');
@@ -60,15 +65,9 @@ function create_block_contributor_menu_block_init() {
 
 	wp_set_script_translations( 'wcw-contributor-menu-block-editor', 'contributor-menu' );
 
-	$editor_css = 'build/index.css';
-	wp_register_style(
-		'wcw-contributor-menu-block-editor',
-		plugins_url( $editor_css, __FILE__ ),
-		array(),
-		filemtime( "$dir/$editor_css" )
-	);
 
-	$style_css = 'build/style-index.css';
+
+	$style_css = 'build/index.css';
 	wp_register_style(
 		'wcw-contributor-menu-block',
 		plugins_url( $style_css, __FILE__ ),
@@ -77,8 +76,7 @@ function create_block_contributor_menu_block_init() {
 	);
 
 	register_block_type( 'wcw/contributor-menu', array(
-		'editor_script'   => 'wcw-contributor-menu-block-editor',
-		'editor_style'    => 'wcw-contributor-menu-block-editor',
+		'editor_script'   => 'wcw-contributor-menu-block-editor',		
 		'style'           => 'wcw-contributor-menu-block',
 		'render_callback' => 'contributors_menu_wcw_render_block',
 		'attributes' => array(         			
