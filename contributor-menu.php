@@ -18,6 +18,8 @@
  * @see https://developer.wordpress.org/block-editor/tutorials/block-tutorial/applying-styles-with-stylesheets/
  */
 
+
+
 require_once( 'includes/class-menus-rest.php');
 WCW_Menus_Rest::init();
 
@@ -28,16 +30,16 @@ function contributors_menu_wcw_render_block($atts) {
 
 	$menu_items = wp_get_nav_menu_items($atts['selectedMenu']);
 
+
 	$menu_html = []; 
 
-	if( !is_array($menu_items) ) {
-		return '<div></div>';
+	if( is_array( $menu_items)) {
+		foreach ($menu_items as $item) {
+			if( isset($item->url) && isset( $item->title)) {
+				array_push($menu_html, '<li><a href="'.$item->url.'">'.$item->title.'</a></li>');
+			}
+		}	
 	}
-
-	foreach ($menu_items as $item) {
-		if( isset($item->url) && isset( $item->title))
-		array_push($menu_html, '<li><a href="'.$item->url.'">'.$item->title.'</a></li>');
-	}	
 
 	return '<ul class="wp-block-contributor-menu">'.implode('', $menu_html).'</ul>';
 }
