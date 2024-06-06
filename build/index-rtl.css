@@ -1,0 +1,2 @@
+.wp-block-contributor-menu{background:#d3d3d3;display:grid;gap:1em;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));list-style:none;margin:1em auto;padding:1em 0}.wp-block-contributor-menu li{border:1px solid #000;box-shadow:-1px 1px 1px #000;display:flex;font-family:VT323,Courier New,Courier,monospace;justify-content:center;padding:.5em}.wp-block-contributor-menu li:hover{box-shadow:none;cursor:pointer}.wp-block-contributor-menu li a{border-bottom:0}.wp-block-contributor-menu li:hover a{text-decoration:underline}
+
