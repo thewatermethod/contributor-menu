@@ -14,7 +14,7 @@
 		"packages-update": "wp-scripts packages-update"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^12.2.0",
+		"@wordpress/scripts": "^28.0.0",
 		"terser-webpack-plugin": "^4.1.0"
 	}
 }
